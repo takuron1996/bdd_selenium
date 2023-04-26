@@ -6,6 +6,11 @@ authors = ["Taku Ikegami"]
 
 [tool.poetry.dependencies]
 python = "^3.11.1"
+pytest-bdd = "^6.1.1"
+selenium = "^4.9.0"
+pytest-clarity = "^1.0.1"
+pytest-randomly = "^3.12.0"
+pytest-mock = "^3.10.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
@@ -47,7 +52,7 @@ exclude = '''
 
 # pytest.iniの設定
 [tool.pytest.ini_options]
-addopts = "-ra -p no:cacheprovider --strict-config --strict-markers"
+addopts = "-ra -p no:cacheprovider --strict-config --strict-markers -vv --diff-width=60"
 
 # .coveragercの設定
 [tool.coverage.run]

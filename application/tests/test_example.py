@@ -3,15 +3,13 @@
 """例題プログラム
 """
 
-__author__ = 'Taku Ikegami'
-__version__ = '1.0.1'
-__date__ = '2023/04/26(Created: 2023/04/26)'
+__author__ = "Taku Ikegami"
+__version__ = "1.0.1"
+__date__ = "2023/04/26(Created: 2023/04/26)"
 
 from bdd_selenium import example
 
 
 def test_main():
-    """例題プログラムのテスト
-    """
+    """例題プログラムのテスト"""
     assert example.main() == "HelloWorld"
-

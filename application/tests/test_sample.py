@@ -1,7 +1,7 @@
 """サンプルのテストコード"""
 
 import pytest
-from pytest_bdd import given, scenario, then, when
+from pytest_bdd import given, parsers, scenario, then, when
 
 from bdd_selenium.sample import Sample
 
@@ -11,10 +11,9 @@ def test_sample():
     pass
 
 
-@pytest.fixture
-@given("「HelloWorld」で初期化")
-def sample():
-    return Sample("HelloWorld")
+@given(parsers.parse("{text} で初期化"), target_fixture="sample")
+def sample(text):
+    return Sample(text)
 
 
 @pytest.fixture
@@ -23,6 +22,6 @@ def run(sample):
     return sample.get_text()
 
 
-@then("「HelloWorld」が返ってくる")
-def check_result(run):
-    assert run == "HelloWorld"
+@then(parsers.parse("{text} が返ってくる"))
+def check_result(run, text):
+    assert run == text

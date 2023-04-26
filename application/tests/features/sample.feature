@@ -1,7 +1,12 @@
 # featureファイルのサンプル
 
 Feature: Sample
-    Scenario: サンプルコードのテスト
-        Given 「HelloWorld」で初期化
+    Scenario Outline: サンプルコードのテスト
+        Given <text> で初期化
         When run関数を実行
-        Then 「HelloWorld」が返ってくる
+        Then <text> が返ってくる
+    
+    Examples:
+        | text |
+        | HelloWorld |
+        | 111 |

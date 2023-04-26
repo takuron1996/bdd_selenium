@@ -7,7 +7,6 @@ authors = ["Taku Ikegami"]
 [tool.poetry.dependencies]
 python = "^3.11.1"
 pytest-bdd = "^6.1.1"
-selenium = "^4.9.0"
 pytest-clarity = "^1.0.1"
 pytest-randomly = "^3.12.0"
 pytest-mock = "^3.10.0"

@@ -9,3 +9,16 @@ services:
     volumes:
       - ./application:/application
     tty: true
+    networks:
+      - sample
+  selenium:
+    container_name: selenium
+    build:
+      context: .
+      dockerfile: containers/selenium/Dockerfile
+    ports:
+      - 4444:4444
+    networks:
+      - sample
+networks:
+  sample:

@@ -21,12 +21,7 @@ def path():
     return Path.cwd() / "tests" / "screenshot"
 
 
-@given(parsers.parse("urlを設定:\n{url}"), target_fixture="url")
-def url(url):
-    return url
-
-
-@when("ページを開く")
+@when(parsers.parse("ページを開く:\n{url}"))
 def open_browser(browser, url):
     browser.visit(url)
 

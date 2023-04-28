@@ -21,7 +21,7 @@ run: format
 	$(DOCKER) poetry run python $(RUN_FILE)
 
 test: format
-	$(DOCKER) poetry run pytest --cov -v --cov-report=html
+	$(DOCKER) poetry run pytest
 
 sh:
 	docker exec -it $(CONTAINER_NAME) /bin/sh

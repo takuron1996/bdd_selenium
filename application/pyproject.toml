@@ -57,7 +57,7 @@ splinter_remote_url = "http://localhost:4444/wd/hub"
 
 
 [tool.pytest.ini_options]
-addopts = "-ra -p no:cacheprovider --strict-config --strict-markers -vv --diff-width=60 --gherkin-terminal-reporter"
+addopts = "-ra -p no:cacheprovider --strict-config --strict-markers -vv --diff-width=60 --gherkin-terminal-reporter --cov --cov-report=html"
 
 
 # .coveragercの設定

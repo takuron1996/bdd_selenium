@@ -1,13 +1,15 @@
 Feature: Web Browserの操作
     Scenario Outline: ブラウザでGoogleを開いてみるテスト
-        Given Googleのurlを設定
+        Given urlを設定:
+            http://google.com
         When ページを開く
-        And グーグルのスクリーンショットの保存場所を設定
-        And スクリーンショットを撮る
+        And スクリーンショットを撮る:
+            google
         Then titleを検証
 
     Scenario Outline: ブラウザでアイフルのホームページを開いてみるテスト
-        Given アイフルのurlを設定
+        Given urlを設定:
+            https://www.aiful.co.jp/
         When ページを開く
-        And アイフルのスクリーンショットの保存場所を設定
-        And スクリーンショットを撮る
+        And スクリーンショットを撮る:
+            aiful
